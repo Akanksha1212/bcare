@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bcare/components/gridDashboard.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bcare/pages/profile.dart';
+import 'package:bcare/pages/slider.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -42,28 +43,73 @@ class HomeState extends State<Home> {
           Padding(
             padding: EdgeInsets.only(left: 16, right: 16),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                CircleAvatar(
+                  radius: 65,
+                  backgroundColor: Color(0xff90b7e2),
+                  child: CircleAvatar(
+                    radius: 60,
+                    backgroundImage: AssetImage('assets/images/giphy.gif'),
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[],
-                ),
+                  children: [
+                    Text(
+                      "Hi! I am B-Care Bunny",
+                      style: GoogleFonts.openSans(
+                          textStyle: TextStyle(
+                              color: Color(0xFF20124d),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold)),
+                    ),
+                    Container(
+//I am here to help you. Have questions about Symptoms, Treatments, Diet etc. Well talking to me
+                      child: Text(
+                        '''I am here to help you. Have\nquestions about Symptoms,\nTreatments, Diet etc.\nTalking to me can help ''',
+                        maxLines: 20,
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Color(0xFF20124d),
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      height: 40,
+                      width: 150,
+                      child: RaisedButton(
+                        child: Text(
+                          'Talk to me',
+                          style: GoogleFonts.openSans(
+                              textStyle: TextStyle(
+                                  color: Color(0xFF20124d),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold)),
+                        ),
+                        color: Colors.blue[100],
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18),
+                            side: BorderSide(color: Colors.black)),
+                        onPressed: () {
+                          // save data
+                        },
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
-          Text(
-            "B-Care",
-            style: GoogleFonts.openSans(
-                textStyle: TextStyle(
-                    color: Color(0xFF20124d),
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold)),
-          ),
-          Image(
-            image: AssetImage('assets/images/earth.png'),
-          ),
           SizedBox(
-            height: 5,
+            height: 20,
           ),
           GridDashboard()
         ],
@@ -111,7 +157,10 @@ class NavDrawer extends StatelessWidget {
                   ListTile(
                     leading: Icon(Icons.settings),
                     title: Text('Settings'),
-                    onTap: () => {Navigator.of(context).pop()},
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SliderDialog())),
                   ),
                   ListTile(
                     leading: Icon(Icons.border_color),

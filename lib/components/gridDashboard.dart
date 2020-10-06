@@ -4,28 +4,28 @@ import 'package:bcare/pages/homepage.dart';
 
 class GridDashboard extends StatelessWidget {
   Items item1 = new Items(
-      title: "Ask for Help", img: "assets/icons/symptoms.png", screen: Home());
+      title: "Information", img: "assets/icons/symptoms.png", screen: Home());
 
   Items item2 = new Items(
-    title: "Help Others",
+    title: "Question?",
     img: "assets/icons/consult.png",
     screen: Home(),
   );
   Items item3 = new Items(
-    title: "Activities",
+    title: "Forum",
     img: "assets/icons/forum.png",
     screen: Home(),
   );
 
-  Items item4 =
-      new Items(title: "Events", img: "assets/icons/med.png", screen: Home());
+  Items item4 = new Items(
+      title: "Medicines", img: "assets/icons/med.png", screen: Home());
   Items item5 = new Items(
-    title: "Events",
+    title: "Diet",
     img: "assets/icons/food.png",
     screen: Home(),
   );
-  Items item6 = new Items(
-      title: "Events", img: "assets/images/health.png", screen: Home());
+  Items item6 =
+      new Items(title: "Journal", img: "assets/icons/info.png", screen: Home());
   @override
   Widget build(BuildContext context) {
     List<Items> myList = [
@@ -42,8 +42,8 @@ class GridDashboard extends StatelessWidget {
           childAspectRatio: 1.0,
           padding: EdgeInsets.only(left: 16, right: 16),
           crossAxisCount: 3,
-          crossAxisSpacing: 18,
-          mainAxisSpacing: 18,
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
           children: myList.map((data) {
             return GestureDetector(
               child: Container(
@@ -55,7 +55,7 @@ class GridDashboard extends StatelessWidget {
                   children: <Widget>[
                     Image.asset(
                       data.img,
-                      width: 55,
+                      width: 60,
                     ),
                     SizedBox(
                       height: 3,
@@ -65,7 +65,7 @@ class GridDashboard extends StatelessWidget {
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
                               color: Colors.white,
-                              fontSize: 8,
+                              fontSize: 15,
                               fontWeight: FontWeight.w600)),
                     ),
                     SizedBox(
