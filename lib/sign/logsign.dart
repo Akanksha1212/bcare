@@ -24,9 +24,12 @@ class SignIn extends StatelessWidget {
                   FadeAnimation(
                       1,
                       Text(
-                        "BCARE",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 40),
+                        "B-CARE",
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Color(0xFF20124d),
+                                fontSize: 80,
+                                fontWeight: FontWeight.bold)),
                       )),
                   SizedBox(
                     height: 10,
@@ -34,7 +37,7 @@ class SignIn extends StatelessWidget {
                   FadeAnimation(
                       1.2,
                       Text(
-                        "Become a part of bcare Community",
+                        "",
                         textAlign: TextAlign.center,
                         style: TextStyle(color: Colors.grey[700], fontSize: 15),
                       )),
@@ -43,10 +46,10 @@ class SignIn extends StatelessWidget {
               FadeAnimation(
                   1.4,
                   Container(
-                    height: MediaQuery.of(context).size.height / 3,
+                    height: MediaQuery.of(context).size.height / 2.5,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/heart.png'),
+                        image: AssetImage('assets/images/logo.png'),
                       ),
                     ),
                   )),

@@ -19,7 +19,9 @@ class ProfileState extends State<Profile> {
           elevation: 0,
           brightness: Brightness.light,
           backgroundColor: Color(0xfffac9c2),
-          title: Text('Profile'),
+          title: Text('Profile',
+          
+          ),
           leading: IconButton(
             onPressed: () {
               Navigator.pop(context);

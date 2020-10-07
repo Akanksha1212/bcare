@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bcare/pages/homepage.dart';
+import 'package:bcare/pages/information.dart';
+import 'package:bcare/pages/qna.dart';
 
 class GridDashboard extends StatelessWidget {
   Items item1 = new Items(
-      title: "Information", img: "assets/icons/symptoms.png", screen: Home());
+      title: "Information",
+      img: "assets/icons/symptoms.png",
+      screen: Information());
 
   Items item2 = new Items(
     title: "Question?",
     img: "assets/icons/consult.png",
-    screen: Home(),
+    screen: QuesAns(),
   );
   Items item3 = new Items(
     title: "Forum",
@@ -42,14 +46,15 @@ class GridDashboard extends StatelessWidget {
           childAspectRatio: 1.0,
           padding: EdgeInsets.only(left: 16, right: 16),
           crossAxisCount: 3,
-          crossAxisSpacing: 15,
-          mainAxisSpacing: 15,
+          crossAxisSpacing: 12,
+          mainAxisSpacing: 12,
           children: myList.map((data) {
             return GestureDetector(
               child: Container(
                 decoration: BoxDecoration(
-                    color: Color(color),
-                    borderRadius: BorderRadius.circular(30)),
+                  color: Color(color),
+                  borderRadius: BorderRadius.circular(30),
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[

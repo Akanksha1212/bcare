@@ -64,27 +64,29 @@ class HomeState extends State<Home> {
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
                               color: Color(0xFF20124d),
-                              fontSize: 20,
+                              fontSize: 18,
                               fontWeight: FontWeight.bold)),
                     ),
+                    SizedBox(
+                      height: 7,
+                    ),
                     Container(
-//I am here to help you. Have questions about Symptoms, Treatments, Diet etc. Well talking to me
                       child: Text(
                         '''I am here to help you. Have\nquestions about Symptoms,\nTreatments, Diet etc.\nTalking to me can help ''',
                         maxLines: 20,
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xFF20124d),
-                                fontSize: 13,
+                                fontSize: 14,
                                 fontWeight: FontWeight.bold)),
                       ),
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     Container(
                       height: 40,
-                      width: 150,
+                      width: 230,
                       child: RaisedButton(
                         child: Text(
                           'Talk to me',
@@ -98,9 +100,7 @@ class HomeState extends State<Home> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                             side: BorderSide(color: Colors.black)),
-                        onPressed: () {
-                          // save data
-                        },
+                        onPressed: () {},
                       ),
                     ),
                   ],
