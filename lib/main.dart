@@ -13,3 +13,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// color
+// blue #26beb5 #1c9c97
+//baby pink #ffecd9  #ffcfcf
+// light purple #dbc6f2
+// cream #ffe4ae

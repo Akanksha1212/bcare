@@ -3,33 +3,42 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:bcare/pages/homepage.dart';
 import 'package:bcare/pages/information.dart';
 import 'package:bcare/pages/qna.dart';
+import 'package:bcare/pages/diet/diet.dart';
+import 'package:bcare/pages/journal/journal.dart';
+import 'package:bcare/medi.dart';
 
 class GridDashboard extends StatelessWidget {
   Items item1 = new Items(
       title: "Information",
-      img: "assets/icons/symptoms.png",
+      img: "assets/images/info.png",
       screen: Information());
 
   Items item2 = new Items(
     title: "Question?",
-    img: "assets/icons/consult.png",
+    img: "assets/images/ques.png",
     screen: QuesAns(),
   );
   Items item3 = new Items(
     title: "Forum",
-    img: "assets/icons/forum.png",
+    img: "assets/images/forum.png",
     screen: Home(),
   );
 
   Items item4 = new Items(
-      title: "Medicines", img: "assets/icons/med.png", screen: Home());
+      title: "Medicines", img: "assets/images/med.png", screen: Medi());
   Items item5 = new Items(
     title: "Diet",
-    img: "assets/icons/food.png",
-    screen: Home(),
+    img: "assets/images/food.png",
+    screen: Diet(),
   );
-  Items item6 =
-      new Items(title: "Journal", img: "assets/icons/info.png", screen: Home());
+  Items item6 = new Items(
+      title: "Journal", img: "assets/images/note.png", screen: Journal());
+  Items item7 = new Items(
+      title: "Fundraiser", img: "assets/images/fund.png", screen: Home());
+  Items item8 = new Items(
+      title: "Support Group", img: "assets/images/lsg.png", screen: Home());
+  Items item9 = new Items(
+      title: "Treatment", img: "assets/images/hospital.png", screen: Home());
   @override
   Widget build(BuildContext context) {
     List<Items> myList = [
@@ -39,38 +48,41 @@ class GridDashboard extends StatelessWidget {
       item4,
       item5,
       item6,
+      item7,
+      item8,
+      item9,
     ];
-    var color = 0xff90b7e2;
+    var color = 0xff1c9c97;
     return Flexible(
       child: GridView.count(
           childAspectRatio: 1.0,
-          padding: EdgeInsets.only(left: 16, right: 16),
+          padding: EdgeInsets.only(left: 14, right: 14),
           crossAxisCount: 3,
-          crossAxisSpacing: 12,
-          mainAxisSpacing: 12,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
           children: myList.map((data) {
             return GestureDetector(
               child: Container(
                 decoration: BoxDecoration(
                   color: Color(color),
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Image.asset(
                       data.img,
-                      width: 60,
+                      width: 70,
                     ),
                     SizedBox(
                       height: 3,
                     ),
                     Text(
                       data.title,
-                      style: GoogleFonts.openSans(
+                      style: GoogleFonts.abel(
                           textStyle: TextStyle(
                               color: Colors.white,
-                              fontSize: 15,
+                              fontSize: 17,
                               fontWeight: FontWeight.w600)),
                     ),
                     SizedBox(

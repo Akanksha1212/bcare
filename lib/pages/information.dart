@@ -10,14 +10,15 @@ class Information extends StatelessWidget {
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
-          backgroundColor: Color(0xfffac9c2),
+          backgroundColor: Color(0xff90b7e2),
           appBar: AppBar(
             elevation: 2,
             brightness: Brightness.light,
-            backgroundColor: Color(0xfffac9c2),
+            backgroundColor: Color(0xff90b7e2),
             title: Text(
               'Information',
               style: GoogleFonts.openSans(

@@ -32,7 +32,7 @@ class FirstScreenState extends State<FirstScreen> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
                           child: Text(
-                            'Do you have any of these problem? If yes, then you immediately need to consult a Doctor',
+                            'Do you have any of these problems? If yes, then you immediately need to consult a Doctor',
                           ),
                         ),
                         SizedBox(

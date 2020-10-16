@@ -1,8 +1,9 @@
+import 'package:bcare/components/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:bcare/components/gridDashboard.dart';
+import 'package:bcare/components/dashboard.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bcare/pages/profile.dart';
-import 'package:bcare/pages/slider.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -17,11 +18,12 @@ class HomeState extends State<Home> {
     screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xfffac9c2),
+      backgroundColor: Color(0xff26beb5),
+      // #ffb8c5 #ff6e8d #ff8ba4
       appBar: AppBar(
         elevation: 2,
         brightness: Brightness.light,
-        backgroundColor: Color(0xfffac9c2),
+        backgroundColor: Color(0xff1c9c97),
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
@@ -40,74 +42,7 @@ class HomeState extends State<Home> {
           SizedBox(
             height: 25,
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 16, right: 16),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                CircleAvatar(
-                  radius: 65,
-                  backgroundColor: Color(0xff90b7e2),
-                  child: CircleAvatar(
-                    radius: 60,
-                    backgroundImage: AssetImage('assets/images/giphy.gif'),
-                  ),
-                ),
-                SizedBox(
-                  width: 15,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Hi! I am B-Care Bunny",
-                      style: GoogleFonts.openSans(
-                          textStyle: TextStyle(
-                              color: Color(0xFF20124d),
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold)),
-                    ),
-                    SizedBox(
-                      height: 7,
-                    ),
-                    Container(
-                      child: Text(
-                        '''I am here to help you. Have\nquestions about Symptoms,\nTreatments, Diet etc.\nTalking to me can help ''',
-                        maxLines: 20,
-                        style: GoogleFonts.openSans(
-                            textStyle: TextStyle(
-                                color: Color(0xFF20124d),
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold)),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      height: 40,
-                      width: 230,
-                      child: RaisedButton(
-                        child: Text(
-                          'Talk to me',
-                          style: GoogleFonts.openSans(
-                              textStyle: TextStyle(
-                                  color: Color(0xFF20124d),
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold)),
-                        ),
-                        color: Colors.blue[100],
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18),
-                            side: BorderSide(color: Colors.black)),
-                        onPressed: () {},
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
+          Dashboard(),
           SizedBox(
             height: 20,
           ),
@@ -135,7 +70,7 @@ class NavDrawer extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
                 decoration: BoxDecoration(
-                    color: Color(0xfffac9c2),
+                    color: Color(0xff90b7e2),
                     image: DecorationImage(
                         fit: BoxFit.fill,
                         image: AssetImage('assets/images/hands.png'))),
@@ -157,10 +92,10 @@ class NavDrawer extends StatelessWidget {
                   ListTile(
                     leading: Icon(Icons.settings),
                     title: Text('Settings'),
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => SliderDialog())),
+                    // onTap: () => Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => SliderDialog())),
                   ),
                   ListTile(
                     leading: Icon(Icons.border_color),

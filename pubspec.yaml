@@ -15,6 +15,16 @@ dependencies:
   cupertino_icons: ^1.0.0
   simple_animations: ^2.2.2
   google_fonts: ^1.1.0
+  rxdart: ^0.24.1
+  provider: ^4.3.2+2
+  shared_preferences: 0.5.12
+  flutter_local_notifications:
+  flare_flutter: ^2.0.6
+  carousel_slider: ^2.3.1
+  font_awesome_flutter: 
+
+
+
  
   
 dev_dependencies:
@@ -31,6 +41,10 @@ flutter:
    - assets/icons/
    - assets/symptoms/
    - assets/self/
+   - assets/med/
+   - assets/emoji/
+   - assets/animations/
+   - assets/sound/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
