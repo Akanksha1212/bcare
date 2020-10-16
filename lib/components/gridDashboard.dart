@@ -5,6 +5,8 @@ import 'package:bcare/pages/information.dart';
 import 'package:bcare/pages/qna.dart';
 import 'package:bcare/pages/diet/diet.dart';
 import 'package:bcare/pages/journal/journal.dart';
+import 'package:bcare/pages/sgmap.dart';
+import 'package:bcare/pages/forum/home_screen.dart';
 import 'package:bcare/medi.dart';
 
 class GridDashboard extends StatelessWidget {
@@ -21,7 +23,7 @@ class GridDashboard extends StatelessWidget {
   Items item3 = new Items(
     title: "Forum",
     img: "assets/images/forum.png",
-    screen: Home(),
+    screen: HomePage(),
   );
 
   Items item4 = new Items(
@@ -36,7 +38,7 @@ class GridDashboard extends StatelessWidget {
   Items item7 = new Items(
       title: "Fundraiser", img: "assets/images/fund.png", screen: Home());
   Items item8 = new Items(
-      title: "Support Group", img: "assets/images/lsg.png", screen: Home());
+      title: "Support Group", img: "assets/images/lsg.png", screen: MapView());
   Items item9 = new Items(
       title: "Treatment", img: "assets/images/hospital.png", screen: Home());
   @override
@@ -52,7 +54,7 @@ class GridDashboard extends StatelessWidget {
       item8,
       item9,
     ];
-    var color = 0xff1c9c97;
+    var color = 0xff8675a9;
     return Flexible(
       child: GridView.count(
           childAspectRatio: 1.0,

@@ -9,20 +9,19 @@ class Dashboard extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: <Widget>[
-        SizedBox(height: 5.0),
         CarouselSlider(
           items: [
             Container(
               margin: EdgeInsets.all(5.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
+                borderRadius: BorderRadius.circular(20.0),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/calendar.png'),
+                  image: AssetImage('assets/images/back3.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(left: 5, right: 5),
+                padding: EdgeInsets.fromLTRB(10, 25, 10, 10),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -94,9 +93,9 @@ class Dashboard extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.all(5.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
+                borderRadius: BorderRadius.circular(20.0),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/calendar.png'),
+                  image: AssetImage('assets/images/back5.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -127,16 +126,14 @@ class Dashboard extends StatelessWidget {
               ),
             ),
             Container(
-              color: Colors.amberAccent,
               margin: EdgeInsets.all(5.0),
-              // decoration: BoxDecoration(
-              //   borderRadius: BorderRadius.circular(10.0),
-              //   image: DecorationImage(
-              //     image: AssetImage('assets/images/hope.jpg'),
-              //     fit: BoxFit.cover,
-              //   ),
-              // ),
-
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20.0),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/back4.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -168,7 +165,7 @@ class Dashboard extends StatelessWidget {
             ),
           ],
           options: CarouselOptions(
-            height: 220.0,
+            height: 300.0,
             enlargeCenterPage: true,
             autoPlay: true,
             aspectRatio: 16 / 9,

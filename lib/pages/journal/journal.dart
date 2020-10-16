@@ -20,9 +20,9 @@ class JournalState extends State<Journal> {
         key: scaffoldKey,
         backgroundColor: Color(0xffffdcdc),
         appBar: AppBar(
-          elevation: 2,
+          elevation: 4,
           brightness: Brightness.light,
-          backgroundColor: Color(0xff90b7e2),
+          backgroundColor: Color(0xffc3aed6),
           leading: Builder(
             builder: (BuildContext context) {
               return IconButton(

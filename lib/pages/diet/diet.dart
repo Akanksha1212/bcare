@@ -14,7 +14,7 @@ class DietState extends State<Diet> {
     screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xffffdcdc),
+      backgroundColor: Color(0xff8675a9),
       body: Container(
         child: new SingleChildScrollView(
           child: new ConstrainedBox(
@@ -64,7 +64,7 @@ class DietState extends State<Diet> {
                                 'Vegan',
                                 style: GoogleFonts.abel(
                                     textStyle: TextStyle(
-                                        color: Colors.black54,
+                                        color: Colors.black,
                                         fontSize: 23,
                                         fontWeight: FontWeight.w600)),
                               ),

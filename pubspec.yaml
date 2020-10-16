@@ -22,6 +22,10 @@ dependencies:
   flare_flutter: ^2.0.6
   carousel_slider: ^2.3.1
   font_awesome_flutter: 
+  google_maps_flutter: ^1.0.3
+  geolocator: ^5.3.1
+  flutter_polyline_points:  ^0.2.4
+  themify_flutter: ^1.0.0
 
 
 
@@ -40,9 +44,11 @@ flutter:
    - assets/images/
    - assets/icons/
    - assets/symptoms/
+   - assets/health/
    - assets/self/
    - assets/med/
    - assets/emoji/
+   - assets/avatars/
    - assets/animations/
    - assets/sound/
 

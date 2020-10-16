@@ -14,7 +14,7 @@ class FirstScreenState extends State<FirstScreen> {
     screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xff9ad7e9),
+      backgroundColor: Color(0xffc3aed6),
       body: Container(
         child: new SingleChildScrollView(
           child: new ConstrainedBox(

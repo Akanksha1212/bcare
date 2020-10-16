@@ -18,12 +18,12 @@ class HomeState extends State<Home> {
     screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xff26beb5),
+      backgroundColor: Color(0xffc3aed6),
       // #ffb8c5 #ff6e8d #ff8ba4
       appBar: AppBar(
-        elevation: 2,
+        elevation: 4,
         brightness: Brightness.light,
-        backgroundColor: Color(0xff1c9c97),
+        backgroundColor: Color(0xffc3aed6),
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
@@ -60,7 +60,7 @@ class NavDrawer extends StatelessWidget {
       width: MediaQuery.of(context).size.width / 1.7, //20.0,
       child: Drawer(
         child: Container(
-          color: Color(0xffaecccf),
+          color: Color(0xffc3aed6),
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
@@ -70,7 +70,7 @@ class NavDrawer extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
                 decoration: BoxDecoration(
-                    color: Color(0xff90b7e2),
+                    color: Color(0xffffd5cd),
                     image: DecorationImage(
                         fit: BoxFit.fill,
                         image: AssetImage('assets/images/hands.png'))),

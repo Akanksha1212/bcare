@@ -14,11 +14,11 @@ class Information extends StatelessWidget {
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
-          backgroundColor: Color(0xff90b7e2),
+          backgroundColor: Color(0xff794c74),
           appBar: AppBar(
-            elevation: 2,
+            elevation: 4,
             brightness: Brightness.light,
-            backgroundColor: Color(0xff90b7e2),
+            backgroundColor: Color(0xffc3aed6),
             title: Text(
               'Information',
               style: GoogleFonts.openSans(
