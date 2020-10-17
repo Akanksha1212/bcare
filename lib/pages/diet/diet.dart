@@ -64,7 +64,7 @@ class DietState extends State<Diet> {
                                 'Vegan',
                                 style: GoogleFonts.abel(
                                     textStyle: TextStyle(
-                                        color: Colors.black,
+                                        color: Colors.black54,
                                         fontSize: 23,
                                         fontWeight: FontWeight.w600)),
                               ),

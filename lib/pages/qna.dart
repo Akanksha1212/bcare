@@ -14,7 +14,7 @@ class QuesAnsState extends State<QuesAns> {
     screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xff9ad7e9),
+      backgroundColor: Color(0xffc3aed6),
       body: Container(
         child: new SingleChildScrollView(
           child: new ConstrainedBox(
@@ -55,7 +55,7 @@ class QuesAnsState extends State<QuesAns> {
                           GestureDetector(
                               child: Card(
                                 child: Padding(
-                                  padding: EdgeInsets.all(10),
+                                  padding: EdgeInsets.all(20),
                                   child: Row(
                                     children: [
                                       Text(
@@ -126,7 +126,7 @@ class QuesAnsState extends State<QuesAns> {
                               }),
                           Card(
                             child: Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(20),
                               child: Row(
                                 children: [
                                   Text(
@@ -192,7 +192,7 @@ class QuesAnsState extends State<QuesAns> {
                           ),
                           Card(
                             child: Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(20),
                               child: Row(
                                 children: [
                                   Text(
@@ -214,11 +214,11 @@ class QuesAnsState extends State<QuesAns> {
                           ),
                           Card(
                             child: Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(20),
                               child: Row(
                                 children: [
                                   Text(
-                                    'What if I don’t \nwant cancer treatment?',
+                                    'What if I don’t want cancer \ntreatment?',
                                     style: GoogleFonts.openSans(
                                         textStyle: TextStyle(
                                             color: Color(0xFF20124d),
@@ -236,7 +236,7 @@ class QuesAnsState extends State<QuesAns> {
                           ),
                           Card(
                             child: Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(20),
                               child: Row(
                                 children: [
                                   Text(
@@ -258,7 +258,7 @@ class QuesAnsState extends State<QuesAns> {
                           ),
                           Card(
                             child: Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(20),
                               child: Row(
                                 children: [
                                   Text(

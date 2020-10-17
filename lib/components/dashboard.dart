@@ -21,15 +21,15 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.fromLTRB(10, 25, 10, 10),
+                padding: EdgeInsets.fromLTRB(10, 70, 10, 10),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     CircleAvatar(
-                      radius: 40,
+                      radius: 45,
                       backgroundColor: Color(0xff90b7e2),
                       child: CircleAvatar(
-                        radius: 30,
+                        radius: 40,
                         backgroundImage: AssetImage('assets/images/giphy.gif'),
                       ),
                     ),
@@ -62,7 +62,7 @@ class Dashboard extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 25,
                         ),
                         Container(
                           height: 40,
@@ -76,7 +76,7 @@ class Dashboard extends StatelessWidget {
                                       fontSize: 10,
                                       fontWeight: FontWeight.bold)),
                             ),
-                            color: Color(0xffaecccf),
+                            color: Color(0xffc3aed6),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18),
                                 side: BorderSide(color: Colors.black)),

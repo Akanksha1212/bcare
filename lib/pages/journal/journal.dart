@@ -10,9 +10,15 @@ class JournalState extends State<Journal> {
   double screenHeight;
   var scaffoldKey = GlobalKey<ScaffoldState>();
   double _currentFatigueValue = 20;
-  double _currentSliderValue = 20;
+  double _currentSleepValue = 20;
+  double _currentHeadValue = 20;
+  double _currentAppValue = 20;
+  double _currentNaValue = 20;
   String fatigue = 'Not at all tired';
   String sleep = 'Slept well';
+  String headache = 'No pain';
+  String appetite = 'Bad Appetite';
+  String nausea = 'Severely Sick';
   @override
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
@@ -205,7 +211,7 @@ class JournalState extends State<Journal> {
                                             fontWeight: FontWeight.w400)),
                                   ),
                                   Slider(
-                                    value: _currentSliderValue,
+                                    value: _currentSleepValue,
                                     min: 0,
                                     max: 100,
                                     divisions: 5,
@@ -213,7 +219,7 @@ class JournalState extends State<Journal> {
                                     inactiveColor: Colors.deepPurple[100],
                                     onChanged: (double value) {
                                       setState(() {
-                                        _currentSliderValue = value;
+                                        _currentSleepValue = value;
                                         if (value == 20) sleep = 'Slept badly';
                                         if (value == 40)
                                           sleep = 'Slept somwhat poorly';
@@ -222,7 +228,7 @@ class JournalState extends State<Journal> {
                                           sleep = 'Slept moderately well';
                                         if (value == 100) sleep = 'Slept well';
                                       });
-                                      print(_currentSliderValue);
+                                      print(_currentSleepValue);
                                     },
                                   ),
                                   Row(
@@ -262,7 +268,7 @@ class JournalState extends State<Journal> {
                                   Container(
                                     alignment: Alignment.centerLeft,
                                     child: Text(
-                                      'Fatigue',
+                                      'Headache',
                                       style: GoogleFonts.lato(
                                           textStyle: TextStyle(
                                               color: Colors.black87,
@@ -271,7 +277,7 @@ class JournalState extends State<Journal> {
                                     ),
                                   ),
                                   Text(
-                                    '$fatigue',
+                                    '$headache',
                                     style: GoogleFonts.lato(
                                         textStyle: TextStyle(
                                             color: Colors.deepPurple[300],
@@ -279,7 +285,7 @@ class JournalState extends State<Journal> {
                                             fontWeight: FontWeight.w400)),
                                   ),
                                   Slider(
-                                    value: _currentSliderValue,
+                                    value: _currentHeadValue,
                                     min: 0,
                                     max: 100,
                                     divisions: 5,
@@ -287,15 +293,17 @@ class JournalState extends State<Journal> {
                                     inactiveColor: Colors.deepPurple[100],
                                     onChanged: (double value) {
                                       setState(() {
-                                        _currentSliderValue = value;
-                                        if (value == 20) fatigue = 'Not tired';
-                                        if (value == 40)
-                                          fatigue = 'Faintly tired';
-                                        if (value == 60) fatigue = 'Tired';
-                                        if (value == 80) fatigue = 'Very Tired';
-                                        if (value == 100) fatigue = 'Exhausted';
+                                        _currentHeadValue = value;
+                                        if (value == 20) headache = 'No pain';
+                                        if (value == 40) headache = 'Mild pain';
+                                        if (value == 60)
+                                          headache = 'Moderate pain';
+                                        if (value == 80)
+                                          headache = 'Very Intense';
+                                        if (value == 100)
+                                          headache = 'Worst possible pain';
                                       });
-                                      print(_currentSliderValue);
+                                      print(_currentHeadValue);
                                     },
                                   ),
                                   Row(
@@ -303,7 +311,7 @@ class JournalState extends State<Journal> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        'Not Tired',
+                                        'No pain',
                                         style: GoogleFonts.lato(
                                             textStyle: TextStyle(
                                                 color: Colors.black45,
@@ -311,7 +319,161 @@ class JournalState extends State<Journal> {
                                                 fontWeight: FontWeight.w600)),
                                       ),
                                       Text(
-                                        'Exhausted',
+                                        'Worst',
+                                        style: GoogleFonts.lato(
+                                            textStyle: TextStyle(
+                                                color: Colors.black45,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600)),
+                                      )
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 8,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          Card(
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(15, 10, 5, 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'Appetite',
+                                      style: GoogleFonts.lato(
+                                          textStyle: TextStyle(
+                                              color: Colors.black87,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w500)),
+                                    ),
+                                  ),
+                                  Text(
+                                    '$appetite',
+                                    style: GoogleFonts.lato(
+                                        textStyle: TextStyle(
+                                            color: Colors.deepPurple[300],
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400)),
+                                  ),
+                                  Slider(
+                                    value: _currentAppValue,
+                                    min: 0,
+                                    max: 100,
+                                    divisions: 5,
+                                    activeColor: Colors.deepPurple[200],
+                                    inactiveColor: Colors.deepPurple[100],
+                                    onChanged: (double value) {
+                                      setState(() {
+                                        _currentAppValue = value;
+                                        if (value == 20)
+                                          appetite = 'Bad Appetite';
+                                        if (value == 40)
+                                          appetite = 'Not Bad Appetite';
+                                        if (value == 60)
+                                          appetite = 'Moderate Appetite';
+                                        if (value == 80)
+                                          appetite = 'Good Appetite';
+                                        if (value == 100)
+                                          appetite = 'Excellent Appetite';
+                                      });
+                                      print(_currentAppValue);
+                                    },
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Bad',
+                                        style: GoogleFonts.lato(
+                                            textStyle: TextStyle(
+                                                color: Colors.black45,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600)),
+                                      ),
+                                      Text(
+                                        'Excellent',
+                                        style: GoogleFonts.lato(
+                                            textStyle: TextStyle(
+                                                color: Colors.black45,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600)),
+                                      )
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 8,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          Card(
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(15, 10, 5, 5),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'Nausea',
+                                      style: GoogleFonts.lato(
+                                          textStyle: TextStyle(
+                                              color: Colors.black87,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w500)),
+                                    ),
+                                  ),
+                                  Text(
+                                    '$nausea',
+                                    style: GoogleFonts.lato(
+                                        textStyle: TextStyle(
+                                            color: Colors.deepPurple[300],
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400)),
+                                  ),
+                                  Slider(
+                                    value: _currentNaValue,
+                                    min: 0,
+                                    max: 100,
+                                    divisions: 5,
+                                    activeColor: Colors.deepPurple[200],
+                                    inactiveColor: Colors.deepPurple[100],
+                                    onChanged: (double value) {
+                                      setState(() {
+                                        _currentNaValue = value;
+                                        if (value == 20)
+                                          nausea = 'Bad Appetite';
+                                        if (value == 40)
+                                          nausea = 'Not Bad Appetite';
+                                        if (value == 60)
+                                          nausea = 'Moderate Appetite';
+                                        if (value == 80)
+                                          nausea = 'Good Appetite';
+                                        if (value == 100)
+                                          nausea = 'Excellent Appetite';
+                                      });
+                                      print(_currentNaValue);
+                                    },
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Severely Sick',
+                                        style: GoogleFonts.lato(
+                                            textStyle: TextStyle(
+                                                color: Colors.black45,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600)),
+                                      ),
+                                      Text(
+                                        'Not At all sick',
                                         style: GoogleFonts.lato(
                                             textStyle: TextStyle(
                                                 color: Colors.black45,

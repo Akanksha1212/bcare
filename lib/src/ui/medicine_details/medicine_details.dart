@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:bcare/src/models/medicine.dart';
 import 'package:provider/provider.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../global_bloc.dart';
 
@@ -23,7 +24,7 @@ class MedicineDetails extends StatelessWidget {
         ),
         centerTitle: true,
         title: Text(
-          "Mediminder Details",
+          "Details",
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -59,7 +60,7 @@ class MedicineDetails extends StatelessWidget {
                     },
                     child: Center(
                       child: Text(
-                        "Delete Mediminder",
+                        "Delete Reminder",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 22,
@@ -99,7 +100,7 @@ class MedicineDetails extends StatelessWidget {
                     padding: EdgeInsets.all(18),
                     child: Center(
                       child: Text(
-                        "Delete this Mediminder?",
+                        "Delete this Reminder?",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),

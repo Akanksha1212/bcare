@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "W",
+                    "Community",
                     style: TextStyle(
                         fontSize: 24,
                         color: Colors.white,
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
-                        "When wome support each other, \nincredible things happen",
+                        "When women support each other, \nincredible things happen",
                         style: TextStyle(
                           color: Colors.white.withOpacity(0.6),
                           fontSize: 14.0,
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Container(
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Color(0xffffdcdc),
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(35.0),
                       topRight: Radius.circular(35.0))),

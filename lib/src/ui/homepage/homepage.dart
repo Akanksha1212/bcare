@@ -4,6 +4,7 @@ import 'package:bcare/src/models/medicine.dart';
 import 'package:bcare/src/ui/medicine_details/medicine_details.dart';
 import 'package:bcare/src/ui/new_entry/new_entry.dart';
 import 'package:provider/provider.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     final GlobalBloc _globalBloc = Provider.of<GlobalBloc>(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff90b7e2),
+        backgroundColor: Color(0xff8675a9),
         elevation: 0.0,
       ),
       body: Container(
@@ -46,7 +47,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         elevation: 4,
-        backgroundColor: Color(0xff90b7e2),
+        backgroundColor: Color(0xff8675a9),
         child: Icon(
           Icons.add,
         ),
@@ -80,7 +81,7 @@ class TopContainer extends StatelessWidget {
             offset: Offset(0, 3.5),
           )
         ],
-        color: Color(0xff90b7e2),
+        color: Color(0xff8675a9),
       ),
       width: double.infinity,
       child: Column(
@@ -90,22 +91,22 @@ class TopContainer extends StatelessWidget {
               bottom: 10,
             ),
             child: Text(
-              "Mediminder",
+              "Medicine Reminder",
               style: TextStyle(
-                fontFamily: "Open Sans",
-                fontSize: 40,
+                fontFamily: "Lato",
+                fontSize: 35,
                 color: Colors.white,
               ),
             ),
           ),
           Divider(
-            color: Color(0xFFB0F3CB),
+            color: Color(0xff8675a9),
           ),
           Padding(
             padding: EdgeInsets.only(top: 12.0),
             child: Center(
               child: Text(
-                "Number of Mediminders",
+                "Number of Reminders",
                 style: TextStyle(
                   fontSize: 17,
                   color: Colors.white,
@@ -191,7 +192,7 @@ class MedicineCard extends StatelessWidget {
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
           IconData(0xe900, fontFamily: "Ic"),
-          color: Color(0xff90b7e2),
+          color: Color(0xff8675a9),
           size: size,
         ),
       );
@@ -200,7 +201,7 @@ class MedicineCard extends StatelessWidget {
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
           IconData(0xe901, fontFamily: "Ic"),
-          color: Color(0xff90b7e2),
+          color: Color(0xff8675a9),
           size: size,
         ),
       );
@@ -209,7 +210,7 @@ class MedicineCard extends StatelessWidget {
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
           IconData(0xe902, fontFamily: "Ic"),
-          color: Color(0xff90b7e2),
+          color: Color(0xff8675a9),
           size: size,
         ),
       );
@@ -218,7 +219,7 @@ class MedicineCard extends StatelessWidget {
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
           IconData(0xe903, fontFamily: "Ic"),
-          color: Color(0xff90b7e2),
+          color: Color(0xff8675a9),
           size: size,
         ),
       );
@@ -227,7 +228,7 @@ class MedicineCard extends StatelessWidget {
       tag: medicine.medicineName + medicine.medicineType,
       child: Icon(
         Icons.error,
-        color: Color(0xff90b7e2),
+        color: Color(0xff8675a9),
         size: size,
       ),
     );
@@ -276,7 +277,7 @@ class MedicineCard extends StatelessWidget {
                       medicine.medicineName,
                       style: TextStyle(
                           fontSize: 22,
-                          color: Color(0xff90b7e2),
+                          color: Color(0xff8675a9),
                           fontWeight: FontWeight.w500),
                     ),
                   ),

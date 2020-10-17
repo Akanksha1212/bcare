@@ -7,6 +7,8 @@ import 'package:bcare/pages/diet/diet.dart';
 import 'package:bcare/pages/journal/journal.dart';
 import 'package:bcare/pages/sgmap.dart';
 import 'package:bcare/pages/forum/home_screen.dart';
+import 'package:bcare/pages/fund.dart';
+import 'package:bcare/pages/hospital.dart';
 import 'package:bcare/medi.dart';
 
 class GridDashboard extends StatelessWidget {
@@ -36,11 +38,13 @@ class GridDashboard extends StatelessWidget {
   Items item6 = new Items(
       title: "Journal", img: "assets/images/note.png", screen: Journal());
   Items item7 = new Items(
-      title: "Fundraiser", img: "assets/images/fund.png", screen: Home());
+      title: "Fundraiser", img: "assets/images/fund.png", screen: Fund());
   Items item8 = new Items(
       title: "Support Group", img: "assets/images/lsg.png", screen: MapView());
   Items item9 = new Items(
-      title: "Treatment", img: "assets/images/hospital.png", screen: Home());
+      title: "Treatment",
+      img: "assets/images/hospital.png",
+      screen: Hospital());
   @override
   Widget build(BuildContext context) {
     List<Items> myList = [

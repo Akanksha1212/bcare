@@ -13,7 +13,7 @@ class _PostScreenState extends State<PostScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffffdcdc),
       body: SafeArea(
         child: ListView(
           children: <Widget>[

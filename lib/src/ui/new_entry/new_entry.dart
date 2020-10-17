@@ -9,6 +9,7 @@ import 'package:bcare/src/ui/homepage/homepage.dart';
 import 'package:bcare/src/ui/new_entry/new_entry_bloc.dart';
 import 'package:bcare/src/ui/success_screen/success_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class NewEntry extends StatefulWidget {
@@ -51,13 +52,13 @@ class _NewEntryState extends State<NewEntry> {
       resizeToAvoidBottomPadding: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xff90b7e2),
+        backgroundColor: Color(0xff8675a9),
         iconTheme: IconThemeData(
-          color: Color(0xffffdcdc),
+          color: Color(0xff8675a9),
         ),
         centerTitle: true,
         title: Text(
-          "Add New Mediminder",
+          "Add New Reminder",
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -123,28 +124,28 @@ class _NewEntryState extends State<NewEntry> {
                         MedicineTypeColumn(
                             type: MedicineType.Bottle,
                             name: "Bottle",
-                            iconValue: 0xe900,
+                            iconValue: 1,
                             isSelected: snapshot.data == MedicineType.Bottle
                                 ? true
                                 : false),
                         MedicineTypeColumn(
                             type: MedicineType.Pill,
                             name: "Pill",
-                            iconValue: 0xe901,
+                            iconValue: 2,
                             isSelected: snapshot.data == MedicineType.Pill
                                 ? true
                                 : false),
                         MedicineTypeColumn(
                             type: MedicineType.Syringe,
                             name: "Syringe",
-                            iconValue: 0xe902,
+                            iconValue: 3,
                             isSelected: snapshot.data == MedicineType.Syringe
                                 ? true
                                 : false),
                         MedicineTypeColumn(
                             type: MedicineType.Tablet,
                             name: "Tablet",
-                            iconValue: 0xe903,
+                            iconValue: 4,
                             isSelected: snapshot.data == MedicineType.Tablet
                                 ? true
                                 : false),
@@ -176,14 +177,14 @@ class _NewEntryState extends State<NewEntry> {
                   width: 220,
                   height: 50,
                   child: FlatButton(
-                    color: Color(0xff90b7e2),
+                    color: Color(0xff8675a9),
                     shape: StadiumBorder(),
                     child: Center(
                       child: Text(
                         "Confirm",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 28,
+                          fontSize: 20,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -339,7 +340,7 @@ class _NewEntryState extends State<NewEntry> {
       'repeatDailyAtTime channel id',
       'repeatDailyAtTime channel name',
       'repeatDailyAtTime description',
-      ledColor: Color(0xff90b7e2),
+      ledColor: Color(0xff8675a9),
       ledOffMs: 1000,
       ledOnMs: 1000,
       enableLights: true,
@@ -401,7 +402,7 @@ class _IntervalSelectionState extends State<IntervalSelection> {
               ),
             ),
             DropdownButton<int>(
-              iconEnabledColor: Color(0xff90b7e2),
+              iconEnabledColor: Color(0xff8675a9),
               hint: _selected == 0
                   ? Text(
                       "Select an Interval",
@@ -483,7 +484,7 @@ class _SelectTimeState extends State<SelectTime> {
       child: Padding(
         padding: EdgeInsets.only(top: 10.0, bottom: 4),
         child: FlatButton(
-          color: Color(0xff90b7e2),
+          color: Color(0xff8675a9),
           shape: StadiumBorder(),
           onPressed: () {
             _selectTime(context);
@@ -533,7 +534,7 @@ class MedicineTypeColumn extends StatelessWidget {
             width: 85,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: isSelected ? Color(0xff90b7e2) : Colors.white,
+              color: isSelected ? Color(0xff8675a9) : Colors.white,
             ),
             child: Center(
               child: Padding(
@@ -552,7 +553,7 @@ class MedicineTypeColumn extends StatelessWidget {
               width: 80,
               height: 30,
               decoration: BoxDecoration(
-                color: isSelected ? Color(0xff90b7e2) : Colors.transparent,
+                color: isSelected ? Color(0xff8675a9) : Colors.transparent,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Center(
@@ -595,7 +596,7 @@ class PanelTitle extends StatelessWidget {
           ),
           TextSpan(
             text: isRequired ? " *" : "",
-            style: TextStyle(fontSize: 14, color: Color(0xff90b7e2)),
+            style: TextStyle(fontSize: 14, color: Color(0xff8675a9)),
           ),
         ]),
       ),
