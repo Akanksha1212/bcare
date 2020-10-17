@@ -130,7 +130,7 @@ class Dashboard extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/back4.jpg'),
+                  image: AssetImage('assets/images/think.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -147,16 +147,17 @@ class Dashboard extends StatelessWidget {
                   //   ),
                   // ),
                   SizedBox(
-                    height: 100,
+                    height: 120,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Text(
-                      'Lorem Ipsum is simply dummy text use for printing and type script',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.0,
-                      ),
+                      '\nBreast Cancer can be detected at an early stage. ',
+                      style: GoogleFonts.abel(
+                          textStyle: TextStyle(
+                              color: Colors.deepPurple,
+                              fontSize: 19,
+                              fontWeight: FontWeight.w800)),
                       textAlign: TextAlign.center,
                     ),
                   ),

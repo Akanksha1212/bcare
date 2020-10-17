@@ -40,6 +40,7 @@ class SecondScreenState extends State<SecondScreen> {
                         ),
                       ],
                     ),
+
                     Padding(
                       padding: EdgeInsets.only(left: 10, right: 10),
                       child: Column(

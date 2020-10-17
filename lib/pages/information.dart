@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bcare/pages/tabs/FirstScreen.dart';
 import 'package:bcare/pages/tabs/SecondScreen.dart';
+import 'package:bcare/pages/tabs/ThirdScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Information extends StatelessWidget {
@@ -12,7 +13,7 @@ class Information extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
-        length: 2,
+        length: 3,
         child: Scaffold(
           backgroundColor: Color(0xff794c74),
           appBar: AppBar(
@@ -32,7 +33,8 @@ class Information extends StatelessWidget {
                 Tab(
                   text: "Symptoms",
                 ),
-                Tab(text: "Self Exam")
+                Tab(text: "Self Exam"),
+                Tab(text: "Videos")
               ],
             ),
           ),
@@ -40,6 +42,7 @@ class Information extends StatelessWidget {
             children: [
               FirstScreen(),
               SecondScreen(),
+              ThirdScreen(),
             ],
           ),
         ),
