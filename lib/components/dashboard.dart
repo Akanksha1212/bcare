@@ -1,7 +1,9 @@
+import 'package:bcare/pages/quiz/quiz.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bcare/pages/quiz/quiz.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -104,7 +106,7 @@ class Dashboard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'Usable Flower for Health',
+                    'Myths myths everywhere',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -114,12 +116,34 @@ class Dashboard extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Text(
-                      'Lorem Ipsum is simply dummy text use for printing and type script',
+                      'Time to check on the facts. Play this mythbuster quiz.',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 15.0,
                       ),
                       textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    height: 40,
+                    width: 200,
+                    child: RaisedButton(
+                      child: Text(
+                        'MythBuster',
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Color(0xFF20124d),
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                      color: Color(0xffc3aed6),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18),
+                          side: BorderSide(color: Colors.black)),
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => QuizScreen())),
                     ),
                   ),
                 ],

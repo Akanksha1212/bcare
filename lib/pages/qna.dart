@@ -15,6 +15,11 @@ class QuesAnsState extends State<QuesAns> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Color(0xffc3aed6),
+      appBar: AppBar(
+        elevation: 4,
+        brightness: Brightness.light,
+        backgroundColor: Color(0xffc3aed6),
+      ),
       body: Container(
         child: new SingleChildScrollView(
           child: new ConstrainedBox(
@@ -27,13 +32,9 @@ class QuesAnsState extends State<QuesAns> {
                       height: 30,
                     ),
                     Image(
-                      image: AssetImage('assets/icons/talk.png'),
-                      height: 150,
-                      width: 150,
+                      image: AssetImage('assets/images/ques1.png'),
                     ),
-                    SizedBox(
-                      height: 20,
-                    ),
+
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [

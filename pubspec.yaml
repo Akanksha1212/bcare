@@ -27,6 +27,8 @@ dependencies:
   themify_flutter: ^1.0.0
   font_awesome_flutter: ^8.10.0
   youtube_player_flutter: ^7.0.0+7
+  rflutter_alert: ^1.0.3
+  url_launcher: ^5.7.5
  
   
 dev_dependencies:

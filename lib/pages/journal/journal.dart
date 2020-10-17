@@ -29,17 +29,6 @@ class JournalState extends State<Journal> {
           elevation: 4,
           brightness: Brightness.light,
           backgroundColor: Color(0xffc3aed6),
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-                icon: new Image.asset('assets/images/menu.png'),
-              );
-            },
-          ),
         ),
         body: Container(
           child: new SingleChildScrollView(
@@ -56,6 +45,24 @@ class JournalState extends State<Journal> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+                          Card(
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(13, 13, 13, 13),
+                              child: Column(children: [
+                                Container(
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    'Date: \16 Oct 2020',
+                                    style: GoogleFonts.lato(
+                                        textStyle: TextStyle(
+                                            color: Colors.black87,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w500)),
+                                  ),
+                                ),
+                              ]),
+                            ),
+                          ),
                           Card(
                             child: Container(
                               padding: EdgeInsets.fromLTRB(13, 13, 13, 13),

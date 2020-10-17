@@ -8,11 +8,11 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color(0xfffac9c2),
+      backgroundColor: Color(0xffc3aed6),
       appBar: AppBar(
         elevation: 0,
         brightness: Brightness.light,
-        backgroundColor: Color(0xfffac9c2),
+        backgroundColor: Color(0xffc3aed6),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -113,7 +113,7 @@ class LoginPage extends StatelessWidget {
                           Text(
                             "Sign up",
                             style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 18),
+                                fontWeight: FontWeight.w600, fontSize: 15),
                           ),
                         ],
                       ))
@@ -151,10 +151,10 @@ class LoginPage extends StatelessWidget {
           obscureText: obscureText,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-            enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0xffd43769))),
-            border: OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0xffd43769))),
+            enabledBorder:
+                OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
+            border:
+                OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
           ),
         ),
         SizedBox(

@@ -7,11 +7,11 @@ class SignupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: Color(0xfffac9c2),
+      backgroundColor: Color(0xffc3aed6),
       appBar: AppBar(
         elevation: 0,
         brightness: Brightness.light,
-        backgroundColor: Color(0xfffac9c2),
+        backgroundColor: Color(0xffc3aed6),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -134,10 +134,10 @@ class SignupPage extends StatelessWidget {
           obscureText: obscureText,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-            enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey[400])),
-            border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey[400])),
+            enabledBorder:
+                OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
+            border:
+                OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
           ),
         ),
         SizedBox(

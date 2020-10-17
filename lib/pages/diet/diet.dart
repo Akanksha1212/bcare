@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bcare/pages/diet/veg.dart';
+import 'package:bcare/pages/diet/nonveg.dart';
+import 'package:bcare/pages/diet/vegan.dart';
 
 class Diet extends StatefulWidget {
   @override
@@ -78,7 +81,7 @@ class DietState extends State<Diet> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(18),
                                     side: BorderSide(color: Colors.black)),
-                                onPressed: () {},
+                                onPressed: (){}
                               ),
                             ),
                             color: Colors.blue[100],
@@ -107,7 +110,10 @@ class DietState extends State<Diet> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(18),
                                     side: BorderSide(color: Colors.black)),
-                                onPressed: () {},
+                                onPressed: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Veg())),
                               ),
                             ),
                             color: Colors.blue[100],
